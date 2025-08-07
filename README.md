@@ -12,7 +12,6 @@ A fully interactive Sudoku game built using **HTML**, **CSS**, and **Vanilla Jav
 - ⏱ Timer and error counter
 - 🔍 Highlighting of invalid and duplicate inputs
 - 📱 Responsive and mobile-friendly design
-- 
 ---
 
 ## 🖥️ Demo
