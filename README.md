@@ -30,7 +30,7 @@ A fully interactive Sudoku game built using **HTML**, **CSS**, and **Vanilla Jav
 
 ## 📸 Screenshots
 
-<img width="413" height="561" alt="image" src="https://github.com/user-attachments/assets/f01299cc-9a37-403d-8ead-049ee88e8283" />
+<img width="414" height="554" alt="image" src="https://github.com/user-attachments/assets/c5512d30-e614-480b-89a5-d90de23572cd" />
 
 ---
 
