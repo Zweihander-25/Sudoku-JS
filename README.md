@@ -37,6 +37,6 @@ A fully interactive Sudoku game built using **HTML**, **CSS**, and **Vanilla Jav
 ## 📄 License
 This project is open-source and available under the MIT License.
 
-🙌 Author
+## 🙌 Author
 
 Akniou Mohamed Achraf
