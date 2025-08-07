@@ -14,12 +14,6 @@ A fully interactive Sudoku game built using **HTML**, **CSS**, and **Vanilla Jav
 - 📱 Responsive and mobile-friendly design
 ---
 
-## 🖥️ Demo
- 
- (You can host it with [GitHub Pages](https://pages.github.com/) or [Netlify](https://www.netlify.com/)!)
-
----
-
 ## 🛠️ Built With
 - HTML5
 - CSS3 (with CSS Variables)
