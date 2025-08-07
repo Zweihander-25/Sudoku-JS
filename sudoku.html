@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Game</title>
+    <link rel="stylesheet" href="sudoku.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Sudoku Game</h1>
+        <hr>
+        
+        <div class="game-controls">
+            <div class="difficulty-selector">
+                <button class="difficulty-btn active" data-level="beginner">Beginner</button>
+                <button class="difficulty-btn" data-level="easy">Easy</button>
+                <button class="difficulty-btn" data-level="normal">Normal</button>
+                <button class="difficulty-btn" data-level="hard">Hard</button>
+                <button class="difficulty-btn" data-level="expert">Expert</button>
+            </div>
+        </div>
+        
+        <div class="game-info">
+            <div id="errors">Errors: 0</div>
+            <div id="timer">Time: 00:00</div>
+        </div>
+        
+        <div id="board"></div>
+        
+        <div id="digits"></div>
+        
+        <div class="game-buttons">
+            <button id="new-game-btn">New Game</button>
+            <button id="notes-btn">Notes Mode</button>
+        </div>
+        
+        <div id="message" class="message success">Congratulations! You solved the puzzle!</div>
+    </div>
+    <script src="sudoku.js"></script>
+</body>
+</html>

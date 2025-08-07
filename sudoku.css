@@ -1,0 +1,301 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #9b59b6;
+    --background-color: #f5f7fa;
+    --tile-color: #ffffff;
+    --text-color: #2c3e50;
+    --error-color: #e74c3c;
+    --selected-color: #d4e6f1;
+    --correct-color: #3498db;
+    --invalid-color: #fadbd8;
+    --border-color: #bdc3c7;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --highlight-color: #aed6f1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 25px;
+}
+
+#title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+    width: 80%;
+    margin: 15px auto;
+    border: 1px solid var(--border-color);
+}
+
+.game-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.difficulty-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.difficulty-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 80px;
+}
+
+.difficulty-btn:hover {
+    background-color: #d5dbdb;
+}
+
+.difficulty-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+#errors {
+    color: var(--error-color);
+    font-weight: bold;
+}
+
+#timer {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+#board {
+    width: 440px;
+    height: 445px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--border-color);
+    border: 3px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.tile {
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--border-color);
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--tile-color);
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.tile-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.tile-notes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 2px;
+    font-size: 10px;
+    color: var(--primary-color);
+    pointer-events: none;
+}
+
+.note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number {
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--border-color);
+    margin: 2px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#digits {
+    width: 450px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+}
+
+.number-selected {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.tile-start {
+    background-color: #f8f9fa;
+    color: var(--text-color);
+}
+
+.horizontal-line {
+    border-bottom: 2px solid var(--border-color);
+}
+
+.vertical-line {
+    border-right: 2px solid var(--border-color);
+}
+
+.tile:hover {
+    background-color: var(--selected-color);
+    cursor: pointer;
+}
+
+.tile-correct {
+    color: var(--correct-color);
+}
+
+.tile-selected {
+    background-color: var(--selected-color);
+}
+
+.tile-invalid {
+    background-color: var(--invalid-color);
+}
+
+.tile-highlight {
+    background-color: var(--highlight-color);
+}
+
+.game-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+#new-game-btn {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+#new-game-btn:hover {
+    background-color: #27ae60;
+}
+
+#notes-btn {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+#notes-btn:hover {
+    background-color: #8e44ad;
+}
+
+#notes-btn.active {
+    background-color: #7d3c98;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: none;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+
+
+
+/* Make 3x3 grids stand out */
+.tile.border-top-bold {
+    border-top: 5px solid var(--border-color);
+}
+.tile.border-left-bold {
+    border-left: 5px solid var(--border-color);
+}
+.tile.border-right-bold {
+    border-right: 5px solid var(--border-color);
+}
+.tile.border-bottom-bold {
+    border-bottom: 5px solid var(--border-color);
+}
